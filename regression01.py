@@ -80,14 +80,16 @@ all_inputs_validation = all_inputs[nsplit:,:]
 z_training   = z[:nsplit]
 z_validation = z[nsplit:]
 
+# now actually performing the train 
 history = model.fit( all_inputs_training, z_training, validation_data = (all_inputs_validation,z_validation), epochs=150, verbose=0)
-print( history.history.keys() )
+
+# ... and plot the training loss
 plt.plot( history.history["val_loss"] )
 plt.plot( history.history["loss"] )
 plt.show()
 
 
-
+# now test the performance of the DNN
 z_predicted_validation = model.predict(all_inputs_validation)
 
 
