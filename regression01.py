@@ -15,8 +15,8 @@ def theFunction(x,y):
 
 # x1 and y1 are random values
 N=800
-x1 = 1.0 * np.random.rand(N)
-y1 = 1.0 * np.random.rand(N)
+x1 = 10.0 * np.random.rand(N)
+y1 = 3.0 * np.random.rand(N)
 
 # the z is the function(x1,y1)
 z = theFunction(x1,y1) 
